@@ -7,7 +7,7 @@
     - !<own> bf86c01d-7e64-4afc-86af-94771f269883
     - !<own> 5fb3c5f1-73ab-4840-9dbd-6fce387a7561
     - !<own> 9acbe536-b52e-492a-868a-531a0328c1d4
-    - !<own> 8e8a2b0e-464c-4767-a53a-cf3b219192c5
+    - !<own> 0c835672-e2e8-491d-825d-adc2501344a3
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - id: 1
@@ -369,6 +369,21 @@
     - !<own> 48f859be-9e84-40f4-a5fa-1a00b05d1c47
   Components:
     []
+- !<SceneObject/0c835672-e2e8-491d-825d-adc2501344a3>
+  PrefabRemaps:
+    []
+  Name: LEAF Plugin Bridge
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> b9669c3e-52db-4eb5-b178-6dcd0fabe9da
 - !<RenderMeshVisual/0d382420-efeb-432f-8d84-0a54c6eebcb1>
   PrefabRemaps:
     []
@@ -1884,21 +1899,6 @@
     - !<own> 1b652ae7-507d-4263-b5cc-052606c4f938
   Components:
     []
-- !<SceneObject/8e8a2b0e-464c-4767-a53a-cf3b219192c5>
-  PrefabRemaps:
-    []
-  Name: LEAF Plugin Bridge
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> e1614714-fd89-4028-a72b-123f19ad2ec5
 - !<SceneObject/8f1a10f1-c095-4a56-88d8-8f379faaa06f>
   PrefabRemaps:
     []
@@ -2476,6 +2476,22 @@
     []
   Components:
     - !<own> 183a2ac0-067b-464c-bd10-46c43744d684
+- !<ScriptComponent/b9669c3e-52db-4eb5-b178-6dcd0fabe9da>
+  PrefabRemaps:
+    []
+  Name: MessagingBridge
+  Enabled: true
+  ScriptAsset: !<reference> 9aa407db-2872-4afc-a162-cf7faf2a0f29
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/b9e3141a-86e6-46a0-8b2f-a82d3196a005>
   PrefabRemaps:
     []
@@ -3089,22 +3105,6 @@
     - !<own> c2ae7a61-f039-4f9c-8048-036012108940
   Components:
     []
-- !<ScriptComponent/e1614714-fd89-4028-a72b-123f19ad2ec5>
-  PrefabRemaps:
-    []
-  Name: MessagingBridge
-  Enabled: true
-  ScriptAsset: !<reference> 9aa407db-2872-4afc-a162-cf7faf2a0f29
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      {}
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/e5172a48-8eac-4328-8fa7-6182931cca22>
   PrefabRemaps:
     []
