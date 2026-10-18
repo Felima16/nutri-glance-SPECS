@@ -1,0 +1,101 @@
+- !<AssetImportMetadata/2a812119-bb80-4c5e-a460-7a5cac5cbec7>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> cd94bd1c-fe6a-4819-a405-9dcb04c0187f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> cd94bd1c-fe6a-4819-a405-9dcb04c0187f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8f2669f3-836f-4f9b-b3ae-abf15cca4305
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8f2669f3-836f-4f9b-b3ae-abf15cca4305>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 15cc2ce0-d322-4ff1-9463-264e7ece4d97
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cameraObject: false
+    colorA: false
+    colorB: false
+    colorC: false
+    colorD: false
+    colorE: false
+    dwellSec: false
+    fadeOutSec: false
+    lingerSec: false
+    mysteryBox: false
+    pinnedClearSec: false
+    pinnedOpacity: false
+    sfxVolume: false
+    snackBar: false
+    yogurt: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      yogurt: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      snackBar: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      mysteryBox: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      dwellSec: 0.500000
+      lingerSec: !<float> 1.000000
+      fadeOutSec: 0.500000
+      pinnedClearSec: !<float> 2.000000
+      pinnedOpacity: 0.450000
+      sfxVolume: 0.700000
+      colorA: !<Vec4> {x: 0.240000, y: 0.860000, z: 0.420000, w: 1.000000}
+      colorB: !<Vec4> {x: 0.650000, y: 0.890000, z: 0.290000, w: 1.000000}
+      colorC: !<Vec4> {x: 1.000000, y: 0.840000, z: 0.180000, w: 1.000000}
+      colorD: !<Vec4> {x: 1.000000, y: 0.600000, z: 0.180000, w: 1.000000}
+      colorE: !<Vec4> {x: 1.000000, y: 0.350000, z: 0.240000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">NutriGlanceMain – look at a product to see its Nutri-Score; pinch to pin</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">References</span>"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input SceneObject cameraObject {"hint":"The Specs camera; its forward ray is the head-gaze"}'
+    - '// @input AssignableType_1 yogurt {"hint":"Yogurt placeholder product (left of the shelf)"}'
+    - '// @input AssignableType_2 snackBar {"hint":"Snack bar placeholder product (right of the shelf)"}'
+    - '// @input AssignableType_3 mysteryBox {"hint":"Product with no assigned grade — must never show a badge"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Gaze & timing</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Gaze & timing"}'
+    - '// @input float dwellSec = 0.5 {"hint":"Seconds of steady gaze on a product before its badge appears", "widget":"slider", "min":0.1, "max":2, "step":0.05}'
+    - '// @input float lingerSec = 1 {"hint":"Seconds an unpinned badge stays at full strength after you look away (lets you compare two products)", "widget":"slider", "min":0, "max":3, "step":0.1}'
+    - '// @input float fadeOutSec = 0.5 {"hint":"Seconds an unpinned badge takes to fade out", "widget":"slider", "min":0.1, "max":2, "step":0.05}'
+    - '// @input float pinnedClearSec = 2 {"hint":"Seconds of looking away from every product before pinned badges clear", "widget":"slider", "min":0.5, "max":6, "step":0.1}'
+    - '// @input float pinnedOpacity = 0.45 {"hint":"Opacity of a pinned badge while you look elsewhere (dimmed)", "widget":"slider", "min":0.1, "max":1, "step":0.05}'
+    - '// @input float sfxVolume = 0.7 {"hint":"Volume of the reveal / pin / unpin sound cues (0 = silent)", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Grade colors (bright: the display is additive)</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Grade colors"}'
+    - '// @input vec4 colorA = "{0.24,0.86,0.42,1}" {"hint":"Color of grade A", "widget":"color"}'
+    - '// @input vec4 colorB = "{0.65,0.89,0.29,1}" {"hint":"Color of grade B", "widget":"color"}'
+    - '// @input vec4 colorC = "{1,0.84,0.18,1}" {"hint":"Color of grade C", "widget":"color"}'
+    - '// @input vec4 colorD = "{1,0.6,0.18,1}" {"hint":"Color of grade D", "widget":"color"}'
+    - '// @input vec4 colorE = "{1,0.35,0.24,1}" {"hint":"Color of grade E", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'
